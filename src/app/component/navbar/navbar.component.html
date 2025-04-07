@@ -1,0 +1,275 @@
+<div style="display: flex; height: 100vh">
+  <app-main-navbar name={{name}} />
+  <div
+    style="
+      border: 5px solid rgb(145, 120, 120);
+      width: 100%;
+      border-radius: 10px;
+    "
+  >
+    <div>
+      <div class="but" style="float: right">
+        <button
+          style="background-color: rgba(0, 0, 0, 0.233); margin-right: 10px"
+          (click)="showclient()"
+        >
+          add client
+        </button>
+        <button (click)="showeemp()">add Employee</button>
+      </div>
+
+      <div style="padding-top: 100px">
+        <div
+          style="
+            display: flex;
+            padding-bottom: 10px;
+          "
+        >
+          <div style="border: 1px solid black;height: 100%;  margin-top: 20px;">
+            <form [formGroup]="searchform">
+              <input placeholder="Search By name" type="text" formControlName="namesearch" (input)="checkname()" />
+            </form>
+          </div>
+          <div>
+            <button (click)="showclientdatas1()">User data</button>
+          </div>
+          <div>
+            <button (click)="showempdatas12()">Employee User Date</button>
+          </div>
+        </div>
+
+        @if(showclientdatas){
+        <div>
+          <table>
+            <h3>Client Data</h3>
+            <tr>
+              <th>S No</th>
+              <th>Name</th>
+              <th>address</th>
+              <th>phone number</th>
+              <th>gender</th>
+              <th>Product</th>
+              <th></th>
+            </tr>
+            @if(clientdata.length===0){
+            <tr>
+              No client is available
+            </tr>
+            } @else{
+            <tr *ngFor="let item1 of clientdata; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ item1.name }}</td>
+              <td>{{ item1.address }}</td>
+              <td>{{ item1.phoneno }}</td>
+              <td>{{ item1.gender }}</td>
+              <td>{{ item1.product }}</td>
+              <td>
+                <button (click)="deleteclient(item1.id)">delete</button>
+                <button (click)="editclient(item1.id)">edit</button>
+              </td>
+            </tr>
+            }
+          </table>
+        </div>
+        } @if(showempdatas1) {
+        <div style="padding-top: 10px">
+          <H3 (click)="showempdatas12()">Employee data</H3>
+          <table>
+            <tr>
+              <th>S No</th>
+              <th>Name</th>
+              <th>address</th>
+              <th>phone number</th>
+              <th>Gender</th>
+              <th>Product</th>
+              <th>State</th>
+              <th>City</th>
+              <th></th>
+            </tr>
+            @if(emp_data.length===0){
+            <tr>
+              NO employee data found
+            </tr>
+            } @else {
+            <tr *ngFor="let empitem of emp_data; let in = index">
+              <td>{{ in + 1 }}</td>
+              <td>{{ empitem.name }}</td>
+              <td>{{ empitem.address }}</td>
+              <td>{{ empitem.phoneno }}</td>
+              <td>{{ empitem.gender }}</td>
+              <td>{{ empitem.product }}</td>
+              <td>{{ empitem.state }}</td>
+              <td>{{ empitem.city }}</td>
+              <td>
+                <button (click)="deleteemp(empitem.id)">delete</button>
+                <button (click)="editempdata(empitem.id)">edit</button>
+              </td>
+            </tr>
+
+            }
+          </table>
+        </div>
+        }
+      </div>
+    </div>
+    @if(showclientform){
+    <div
+      style="
+        border: 1px solid rgb(199, 168, 168);
+        position: absolute;
+        z-index: 10;
+        top: 0px;
+        display: flex;
+        justify-content: center;
+        right: 0;
+        width: 600px;
+        background-color: black;
+        color: rgb(245, 242, 236);
+        height: 100vh;
+      "
+    >
+    
+      <div style="border: 1px solid black; width: 300px">
+        <h1 style="margin-bottom: 10px">Client form</h1>
+        <form [formGroup]="addclientdata">
+          <div><label>Name</label></div>
+          <div>
+            <input
+              type="text"
+              placeholder="Enter name"
+              formControlName="name"
+            />
+          </div>
+          <div><label>Address</label></div>
+          <div>
+            <input
+              type="text"
+              placeholder="Enter address"
+              formControlName="address"
+            />
+          </div>
+          <div><label>PHONE Number</label></div>
+          <div>
+            <input
+              type="text"
+              placeholder="Enter Phone number"
+              formControlName="phoneno"
+            />
+          </div>
+
+          <div>
+            <div>Gender</div>
+            <label>Male</label>
+            <input type="radio" value="Male" formControlName="gender"/>
+             <label>female</label>
+            <input type="radio" value="female" formControlName="gender"/>
+             <label>None</label>
+            <input type="radio" value="none" formControlName="gender"/>
+          </div>
+
+          <div>
+            <label>Product</label>
+            <select formControlName="product">
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+            </select>
+          </div>
+          @if(!editshow){
+          <button (click)="addclient()">add client</button>
+          } @else { <button (click)="editclientdone()">edit client</button>}
+          <button (click)="showclient()">cancel</button>
+        </form>
+      </div>
+    </div>
+
+    } @if(showempform){
+    <div
+      style="
+        border: 1px solid red;
+        position: absolute;
+        z-index: 10;
+        top: 0px;
+        display: flex;
+        justify-content: center;
+        right: 0;
+        width: 300px;
+        background-color: rgba(10, 11, 95, 0.87);
+        color: rgb(245, 242, 236);
+        height: 100vh;
+        padding: 100px;
+      "
+    >
+      <div style="width: 400px; padding: 20px">
+        <h1 style="padding-bottom: 10px">Employee form</h1>
+        <form [formGroup]="addempform">
+          <div><label>Name</label></div>
+          <div>
+            <input
+              type="text"
+              placeholder="Enter name"
+              formControlName="name"
+            />
+          </div>
+          <div><label>Address</label></div>
+          <div>
+            <input
+              type="text"
+              placeholder="Enter address"
+              formControlName="address"
+            />
+          </div>
+          <div><label>PHONE Number</label></div>
+          <div>
+            <input
+              type="text"
+              placeholder="Enter Phone number"
+              formControlName="phoneno"
+            />
+          </div>
+
+        
+          <div>
+            <div>Gender</div>
+            <label>Male</label>
+            <input type="radio" value="Male" formControlName="gender"/>
+             <label>female</label>
+            <input type="radio" value="female" formControlName="gender"/>
+             <label>None</label>
+            <input type="radio" value="none" formControlName="gender"/>
+          </div>
+
+          <div>
+            <label>Product</label>
+            <select formControlName="product">
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+            </select>
+          </div>
+          <div>
+            <label>Enter state here</label>
+            <input formControlName="state" placeholder="State" />
+          </div>
+          <div>
+            <label>Enter city here</label>
+            <input formControlName="city" placeholder="city" />
+          </div>
+          <div></div>
+
+          @if(!showempedit){
+          <button (click)="addemp()">add employee</button>
+          } @else {
+          <button (click)="edittempdata()">edit employee</button>
+
+          }
+          <button (click)="showeemp()">cancel</button>
+        </form>
+      </div>
+    </div>
+
+    }
+  </div>
+</div>

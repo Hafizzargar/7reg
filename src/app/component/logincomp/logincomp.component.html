@@ -1,0 +1,19 @@
+
+  <div class="a1" style="margin-top: 30vh; margin-inline: 40vh;">
+   
+    <form [formGroup]=user >
+      <H1>LOGIN Here</H1>
+      <div><label>Enter Email</label></div>
+      <div><input placeholder="Enter email" formControlName="email"  /></div>
+    
+      <div><label>Enter Password</label></div>
+      <div><input placeholder="Enter Password" formControlName="password" /></div>
+  
+      <button (click)="senddata()">LOGIN</button>
+      <div style="padding-top: 10px;font-size: 20px;">
+        <span style="color: blue;">Not having account </span>
+        <u (click)="gotoregister()">Register</u>
+      </div>
+    </form>
+  </div>
+

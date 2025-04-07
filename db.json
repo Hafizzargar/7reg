@@ -1,0 +1,28 @@
+{
+  "user": [
+    {
+      "id": "202b",
+      "email": "1234",
+      "name": "1234",
+      "password": "1234",
+      "username": "1234"
+    },
+    {
+      "id": "2",
+      "body": "Nice post!",
+      "postId": 1
+    }
+  ],
+  "client": [
+    {
+      "id": "cc53",
+      "name": "22",
+      "address": "wqqdw122",
+      "phoneno": "qwdqwd222",
+      "gender": "Male",
+      "product": "A",
+      "objid": "202b"
+    }
+  ],
+  "emp": []
+}

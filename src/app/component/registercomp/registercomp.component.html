@@ -1,0 +1,22 @@
+
+  <div style="display: flex;justify-content: center;align-items: center;">
+    <form [formGroup]=newuser>
+      <h1 style="color: wheat;">Register</h1>
+      <div><label>Enter Email</label></div>
+      <div><input placeholder="Enter email" formControlName="email" /></div>
+      <div><label>Enter name</label></div>
+      <div>
+        <input placeholder="Enter name" formControlName="name" />
+      </div>
+      <div><label>Enter username</label></div>
+      <div><input placeholder="Enter username" formControlName="username" /></div>
+      <div><label>Enter Password</label></div>
+      <div><input placeholder="Enter Password" formControlName="password" /></div>
+  
+      <button (click)="registerdata()">register</button>
+      <div>
+        <button (click)="gotologin()">login</button>
+      </div>
+    </form>
+  </div>
+  
