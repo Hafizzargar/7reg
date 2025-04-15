@@ -1,0 +1,72 @@
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    box-shadow: 1px 90px 50px rgb(235, 223, 120);
+  }
+  
+  .greeting-box {
+    width: 200px;
+    font-size: 32px;
+    padding: 25px 20px;
+    margin-top: 40px;
+    margin-inline: 10px;
+    background-color: rgb(219, 71, 83);
+    color: white;
+    border-radius: 10px;
+  }
+  
+  .links {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .links a:hover {
+    background-color: #f0f0f0;
+    color: #000;
+  }
+  
+  .logout-button {
+    position: absolute;
+    bottom: 60px;
+    width: 60%;
+  }
+  
+  .logout-button button {
+    width: 100%;
+    height: 40px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .logout-button button:hover {
+    background-color: #c0392b;
+  }
+
+  .a1{
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+  }

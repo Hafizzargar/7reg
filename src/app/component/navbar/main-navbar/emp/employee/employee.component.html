@@ -1,0 +1,4 @@
+<div class="client-container">
+  <button mat-button (click)="openDialog()" style="color: rgba(0, 0, 240, 0.795);">add Emp</button>
+  <app-table table_name="Employee Table" who="emp" [data]="empdata12" [head]="headclient" (del_id)="del_item($event)" (edit_id)="editfxn($event)"/>
+</div>

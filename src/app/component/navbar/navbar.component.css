@@ -2,10 +2,7 @@
     padding: 10px;
     background-color: aquamarine;
 }
-input,label{
-    padding: 10px;
-    width: 250px;
-}
+
 button{
     padding: 10px;
     margin-top: 20px;
@@ -23,4 +20,10 @@ td{
 th,td{
     width: 10vw;
 
+}
+.a1{
+    color: red;
+}
+input{
+    padding: 10px;
 }

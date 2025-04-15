@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 // import jwt from 'jsonwebtoken';
 
@@ -13,28 +13,28 @@ import { Router } from '@angular/router';
 })
 export class RegistercompComponent {
   newuser:FormGroup=new FormGroup({
-    email:new FormControl(''),
-    name:new FormControl(''),
-    password:new FormControl(''),
-    username:new FormControl(''),
+    email:new FormControl('',[Validators.email,Validators.required]),
+    name:new FormControl('',[Validators.minLength(4),Validators.required]),
+    password:new FormControl('',[Validators.minLength(4),Validators.required]),
+    username:new FormControl('',[Validators.minLength(6),Validators.required]),
   })
   constructor(private http:HttpClient,private route:Router){}
   getuserregiterdata=[];
   objnew={};
   registerdata(){ 
     this.objnew=this.newuser.value;
-    if(!this.newuser.value.email.trim()){
-      return alert("email is empty");
-    }
-    if(!this.newuser.value.name.trim()){
-      return alert("name is empty");
-    }
-    if(!this.newuser.value.password.trim()){
-      return alert("password is empty");
-    }
-    if(!this.newuser.value.username.trim()){
-      return alert("username is empty");
-    }
+    // if(!this.newuser.value.email.trim()){
+    //   return alert("email is empty");
+    // }
+    // if(!this.newuser.value.name.trim()){
+    //   return alert("name is empty");
+    // }
+    // if(!this.newuser.value.password.trim()){
+    //   return alert("password is empty");
+    // }
+    // if(!this.newuser.value.username.trim()){
+    //   return alert("username is empty");
+    // }
     // console.log(this.objnew);
    const userexistemail= this.getuserregiterdata.find((e:any)=>{
     // console.log(e.email);
@@ -48,12 +48,11 @@ export class RegistercompComponent {
     
     this.http.post('http://localhost:3000/user',this.objnew)
     .subscribe((res:any)=>{
-      // console.log(res);
       this.getuserdata();
     })
     this.newuser.reset();
     this.route.navigateByUrl('');
-    this.sl=false;
+    
   }
   //get user data
   getuserdata(){

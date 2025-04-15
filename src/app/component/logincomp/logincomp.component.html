@@ -1,19 +1,58 @@
 
-  <div class="a1" style="margin-top: 30vh; margin-inline: 40vh;">
-   
-    <form [formGroup]=user >
-      <H1>LOGIN Here</H1>
-      <div><label>Enter Email</label></div>
-      <div><input placeholder="Enter email" formControlName="email"  /></div>
-    
-      <div><label>Enter Password</label></div>
-      <div><input placeholder="Enter Password" formControlName="password" /></div>
+<div class="a1" style="margin-top: 30vh; margin-inline: 40vw">
   
-      <button (click)="senddata()">LOGIN</button>
-      <div style="padding-top: 10px;font-size: 20px;">
-        <span style="color: blue;">Not having account </span>
-        <u (click)="gotoregister()">Register</u>
-      </div>
-    </form>
-  </div>
+@if(showlogin){
 
+  <!-- <form >
+      <H1>LOGIN Here</H1>
+      <div><label></label></div>
+      <div>
+      </div>
+      <div><label></label></div>
+      <div><input placeholder="Enter Password" formControlName="password"/></div>
+      <div class="cond" *ngIf=" user.get('password')?.touched && user.get('password')?.errors?.['required']">password required</div>
+      </div>
+    </form> -->
+  <form class="example-form" [formGroup]="user">
+    <mat-form-field class="example-full-width">
+      <mat-label>Enter Email</mat-label>
+      <input matInput placeholder="Enter email" formControlName="email" />
+      <!-- <input placeholder="Ex. Pizza" value="Sushi"> -->
+      <div
+        class="cond"
+        *ngIf="user.get('email')?.touched && user.get('email')?.invalid"
+      >
+        Email is required
+      </div>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label> Enter Password</mat-label>
+      <input matInput placeholder="Enter Password" formControlName="password" />
+      <!-- <input placeholder="Ex. Pizza" value="Sushi"> -->
+      <div
+        class="cond"
+        *ngIf="user.get('password')?.touched && user.get('password')?.invalid"
+      >
+        password is less than 5 digit is not valid
+      </div>
+    </mat-form-field>
+
+    <button (click)="senddata()" [disabled]="user.invalid">LOGIN</button>
+  </form>
+  <div style="padding-top: 10px; font-size: 20px">
+    <span style="color: rgb(181, 181, 228)">Not having account </span>
+    <u (click)="gotoregister()">Register</u>
+  </div>
+} 
+
+
+
+ 
+</div>
+<mat-progress-bar mode="buffer"></mat-progress-bar>
+
+
+@if(!showlogin){
+  <div class="a1" style="margin-top: 30vh; margin-inline: 40vw"><mat-spinner></mat-spinner></div>
+ }

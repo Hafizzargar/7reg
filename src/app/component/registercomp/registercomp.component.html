@@ -1,22 +1,28 @@
 
-  <div style="display: flex;justify-content: center;align-items: center;">
+  <div style="display: flex;justify-content: center;align-items: center; margin-top: 200px;">
+   <div style="padding-top: 100px;padding: 40px;background-color: rgb(125, 212, 228);border-radius: 20px;">
     <form [formGroup]=newuser>
-      <h1 style="color: wheat;">Register</h1>
+      <h1 style="color: rgb(255, 51, 0);text-align: center;margin-bottom: 30px;">Register</h1>
       <div><label>Enter Email</label></div>
       <div><input placeholder="Enter email" formControlName="email" /></div>
+      <div class="a1" *ngIf="newuser.get('email')?.touched && newuser.get('email')?.invalid">incorrect email format</div>
       <div><label>Enter name</label></div>
       <div>
         <input placeholder="Enter name" formControlName="name" />
+        <div class="a1" *ngIf="newuser.get('name')?.touched && newuser.get('name')?.errors?.['minlength']">name should be > 4 character</div>
       </div>
       <div><label>Enter username</label></div>
       <div><input placeholder="Enter username" formControlName="username" /></div>
+      <div *ngIf="newuser.get('username')?.touched && newuser.get('username')?.errors?.['minlength']" class="a1">username should be > 6</div>
       <div><label>Enter Password</label></div>
       <div><input placeholder="Enter Password" formControlName="password" /></div>
+      <div *ngIf="newuser.get('password')?.touched && newuser.get('password')?.errors?.['minlength']" class="a1">password should be > 6</div>
   
-      <button (click)="registerdata()">register</button>
-      <div>
+      <button (click)="registerdata()" [disabled]="newuser.invalid">register</button>
+      <div>Already having account
         <button (click)="gotologin()">login</button>
       </div>
     </form>
+   </div>
   </div>
   

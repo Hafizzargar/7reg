@@ -2,27 +2,447 @@
   "user": [
     {
       "id": "202b",
-      "email": "1234",
-      "name": "1234",
-      "password": "1234",
+      "email": "12341234@gmail.com",
+      "name": "hafeez",
+      "password": "12341234",
       "username": "1234"
     },
     {
-      "id": "2",
-      "body": "Nice post!",
-      "postId": 1
+      "id": "f26c",
+      "email": "123456@gmail.com",
+      "name": "1234567",
+      "password": "123456",
+      "username": "1234567"
     }
   ],
   "client": [
     {
-      "id": "cc53",
-      "name": "22",
-      "address": "wqqdw122",
-      "phoneno": "qwdqwd222",
+      "id": "1fac",
+      "name": "qwswqsqws",
+      "address": "qwsqwsqws",
+      "phoneno": "qwsqwsqws",
+      "gender": "Male",
+      "product": "B",
+      "objid": ""
+    },
+    {
+      "id": "2081",
+      "name": "qwswqsqws",
+      "address": "qwsqwsqws",
+      "phoneno": "qwsqwsqws",
+      "gender": "Male",
+      "product": "C",
+      "objid": ""
+    },
+    {
+      "id": "5d73",
+      "name": "qwdeqw3",
+      "address": "qqwsdqwsdq",
+      "phoneno": "qwsdqwsdqwsqwsq",
       "gender": "Male",
       "product": "A",
-      "objid": "202b"
+      "state": "",
+      "city": ""
+    },
+    {
+      "id": "6757",
+      "name": "qwdeqw3",
+      "address": "qqwsdqwsdq",
+      "phoneno": "qwsdqwsdqwsqwsq",
+      "gender": "Male",
+      "product": "A",
+      "state": "",
+      "city": ""
+    },
+    {
+      "id": "c240",
+      "name": "",
+      "address": "",
+      "phoneno": "",
+      "gender": "",
+      "product": "",
+      "state": "",
+      "city": ""
+    },
+    {
+      "id": "a373",
+      "name": "",
+      "address": "",
+      "phoneno": "",
+      "gender": "",
+      "product": "",
+      "state": "",
+      "city": ""
+    },
+    {
+      "id": "dde0",
+      "name": "qwsdqsqwsd",
+      "address": "sqwsqwsqws",
+      "phoneno": "qwsqwsqwsqws",
+      "gender": "Male",
+      "product": "A",
+      "state": "",
+      "city": ""
+    },
+    {
+      "id": "efb9",
+      "name": "qwsqwsqwsqws",
+      "address": "qwsqsqwsqs",
+      "phoneno": "qsqwsqwsqwsqw",
+      "gender": "Male",
+      "product": "B",
+      "state": "",
+      "city": ""
+    },
+    {
+      "id": "30b4",
+      "name": "swswswswsws",
+      "address": "qswqswqsw",
+      "phoneno": "wswswswswsw",
+      "gender": "Male",
+      "product": "B",
+      "state": "",
+      "city": ""
+    },
+    {
+      "id": "c075",
+      "name": "212111",
+      "address": "qswqswqsw",
+      "phoneno": "wswswswswsw",
+      "gender": "Male",
+      "product": "B",
+      "state": "",
+      "city": ""
+    },
+    {
+      "id": "ca5e",
+      "obj": {
+        "name": "asxdwqwqwqdqd",
+        "address": "qwdwqdqwdqwdqwdqwd",
+        "phoneno": "qwdqwdwqddq",
+        "gender": "Male",
+        "product": "B",
+        "objid": "f26c"
+      }
+    },
+    {
+      "id": "7a53",
+      "obj": {
+        "name": "11111111111111111111111",
+        "address": "11111111111111111111111",
+        "phoneno": "1111111111111111111",
+        "gender": "Male",
+        "product": "B",
+        "objid": "f26c"
+      }
+    },
+    {
+      "datas": {
+        "name": "33333333333",
+        "address": "aaaaaaaaaaaaaaaaaa",
+        "phoneno": "aaaaaaaaaaaaaaaaaaaaa",
+        "gender": "Male",
+        "product": "B"
+      },
+      "id": "1140"
+    },
+    {
+      "datas": {
+        "name": "6666666666666666666",
+        "address": "edddddddddddddddddddddddddd",
+        "phoneno": "deeeeeeeeeeeeeeeeee",
+        "gender": "Male",
+        "product": "B"
+      },
+      "id": "8b2a"
+    },
+    {
+      "id": "19d8",
+      "name": "44444444444444444444",
+      "address": "444444444444444444444444",
+      "phoneno": "44444444444444444444",
+      "gender": "Male",
+      "product": "B",
+      "objid": "f26c"
+    },
+    {
+      "id": "987a",
+      "name": "`1`1`1`1`1`11`1`1`",
+      "address": "`1``1`111`1```111`",
+      "phoneno": "1`1`1`1`1`1`1`1`1`1`1",
+      "gender": "Male",
+      "product": "B",
+      "objid": "f26c"
+    },
+    {
+      "id": "12be",
+      "name": "dddddddd",
+      "address": "dddddddddddddddd",
+      "phoneno": "dddddddddddd",
+      "gender": "Male",
+      "product": "B",
+      "objid": "f26c"
+    },
+    {
+      "id": "f882",
+      "name": "dewdwedwedwedew33333333333",
+      "address": "wedwewwedwedw",
+      "phoneno": "ewddweddew",
+      "gender": "Male",
+      "product": "C",
+      "objid": "f26c"
+    },
+    {
+      "id": "4265",
+      "name": "ewdewwwwwwwwwwww",
+      "address": "ewdweddwedwed",
+      "phoneno": "wedwedwedwed",
+      "gender": "Male",
+      "product": "B",
+      "objid": "f26c"
+    },
+    {
+      "id": "2b91",
+      "name": "w1w1w1w1w",
+      "address": "w1w1w1w1w",
+      "phoneno": "w1w1w1w1w1w",
+      "gender": "female",
+      "product": "A",
+      "objid": "f26c"
+    },
+    {
+      "id": "2417",
+      "name": "121212121",
+      "address": "11111111111111111111111",
+      "phoneno": "1212121121",
+      "gender": "female",
+      "product": "C",
+      "objid": "f26c"
+    },
+    {
+      "id": "4d69",
+      "name": "12111sws",
+      "address": "s1s333s",
+      "phoneno": "3s2323s3s3s3s",
+      "gender": "Male",
+      "product": "B",
+      "objid": "f26c"
     }
   ],
-  "emp": []
+  "emp": [
+    {
+      "id": "a043",
+      "objid": "202b",
+      "city": "Agra",
+      "name": "rd23er23r23r",
+      "address": "23r2323r23r",
+      "phoneno": "23r23r32r32r23r",
+      "gender": "Male",
+      "product": "A",
+      "state": "2"
+    },
+    {
+      "id": "3ff5",
+      "name": "222222222222",
+      "address": "wedwedwedwed",
+      "phoneno": "22222222222222222",
+      "gender": "Male",
+      "product": "C",
+      "state": "",
+      "city": ""
+    },
+    {
+      "id": "304f",
+      "name": "qwdqwdqdqw",
+      "address": "dqwdqwdqwdqw",
+      "phoneno": "qwdqwdwqdwqd",
+      "gender": "Male",
+      "product": "B",
+      "state": "2",
+      "city": "Agra"
+    },
+    {
+      "id": "3432",
+      "name": "wsqwswsqws",
+      "address": "qwsqwsqwsqws",
+      "phoneno": "qsqwsqwsqwsqws",
+      "gender": "Male",
+      "product": "A",
+      "state": "1",
+      "city": "mohali"
+    },
+    {
+      "id": "2e18",
+      "name": "wsqwswsqws",
+      "address": "qwsqwsqwsqws",
+      "phoneno": "qsqwsqwsqwsqws",
+      "gender": "Male",
+      "product": "A",
+      "state": "1",
+      "city": "mohali"
+    },
+    {
+      "id": "80e1",
+      "name": "wsqwswsqws",
+      "address": "qwsqwsqwsqws",
+      "phoneno": "qsqwsqwsqwsqws",
+      "gender": "Male",
+      "product": "A",
+      "state": "1",
+      "city": "mohali"
+    },
+    {
+      "id": "4b87",
+      "name": "wsqwswsqws",
+      "address": "qwsqwsqwsqws",
+      "phoneno": "qsqwsqwsqwsqws",
+      "gender": "Male",
+      "product": "A",
+      "state": "1",
+      "city": "mohali"
+    },
+    {
+      "id": "8253",
+      "name": "3333333333333",
+      "address": "aaaaaaaaaaaaaaaaa",
+      "phoneno": "aaaaaaaaaaaaaaaaa",
+      "gender": "Male",
+      "product": "C",
+      "state": "2",
+      "city": "new delhi",
+      "objid": "f26c"
+    },
+    {
+      "id": "3a6a",
+      "name": "33333333333333333",
+      "address": "222222222222222222",
+      "phoneno": "22222222222222222222",
+      "gender": "Male",
+      "product": "B",
+      "state": "3",
+      "city": "katra",
+      "objid": "f26c"
+    },
+    {
+      "id": "6a34",
+      "name": "qqqqqqqqqqqqqqqq",
+      "address": "qqqqqqqqqqqqqqqq",
+      "phoneno": "qqqqqqqqqqqqqqqqqqqqqqqqqqq",
+      "gender": "Male",
+      "product": "B",
+      "state": "3",
+      "city": "doda",
+      "objid": "f26c"
+    },
+    {
+      "id": "c268",
+      "name": "asdxaxsas",
+      "address": "asasxasxqws",
+      "phoneno": "sqwsqswqsqwsqw",
+      "gender": "female",
+      "product": "B",
+      "state": "1",
+      "city": "karat",
+      "objid": "f26c"
+    },
+    {
+      "id": "9f2f",
+      "name": "111111111111",
+      "address": "11111111111111111",
+      "phoneno": "1111111111111111",
+      "gender": "Male",
+      "product": "B",
+      "state": "3",
+      "city": "jammu",
+      "objid": "f26c"
+    },
+    {
+      "id": "1ca0",
+      "name": "121212",
+      "address": "1221221",
+      "phoneno": "1212121212",
+      "gender": "Male",
+      "product": "D",
+      "state": "3",
+      "city": "doda",
+      "objid": "f26c"
+    },
+    {
+      "id": "8919",
+      "name": "3s2s23s23s2",
+      "address": "s2s2323s222",
+      "phoneno": "23s23ss232s3323233s",
+      "gender": "female",
+      "product": "D",
+      "state": "2",
+      "city": "Agra",
+      "objid": "f26c"
+    }
+  ],
+  "state": [
+    {
+      "id": "1",
+      "state": "punjab"
+    },
+    {
+      "id": "2",
+      "state": "delhi"
+    },
+    {
+      "id": "3",
+      "state": "jammu and kashmir"
+    }
+  ],
+  "city": [
+    {
+      "stateId": "1",
+      "cities": [
+        {
+          "id": "",
+          "name": "mohali"
+        },
+        {
+          "id": "",
+          "name": "karat"
+        },
+        {
+          "id": "",
+          "name": "jalander"
+        }
+      ],
+      "id": "16a8"
+    },
+    {
+      "stateId": "2",
+      "cities": [
+        {
+          "id": "",
+          "name": "Agra"
+        },
+        {
+          "id": "",
+          "name": "new delhi"
+        }
+      ],
+      "id": "5ebc"
+    },
+    {
+      "stateId": "3",
+      "cities": [
+        {
+          "id": "",
+          "name": "jammu"
+        },
+        {
+          "id": "",
+          "name": "katra"
+        },
+        {
+          "id": "",
+          "name": "doda"
+        }
+      ],
+      "id": "2709"
+    }
+  ]
 }

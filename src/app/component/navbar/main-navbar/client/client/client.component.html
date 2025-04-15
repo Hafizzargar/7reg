@@ -1,0 +1,4 @@
+<div class="client-container">
+ <button mat-button (click)="openDialog()">Add client</button>
+  <app-table  [data]="clientdata" [head]="headclient" (del_id)="del_item($event)" (edit_id)="editfxn($event)"/>
+</div>

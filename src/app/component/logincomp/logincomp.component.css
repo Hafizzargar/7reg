@@ -31,6 +31,7 @@
     border: 1px solid #ccc;
     font-size: 16px;
     transition: border 0.3s ease;
+  
   }
   
   input:focus {
@@ -53,6 +54,9 @@
   button:hover {
     background-color: #0056b3;
   }
+  button:disabled{
+    background-color: #ccc;
+  }
   
   u {
     cursor: pointer;
@@ -62,5 +66,19 @@
   
   u:hover {
     color: #0056b3;
+  }
+  .cond{
+   text-align: left;
+    color: red;
+  }
+
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
   }
   

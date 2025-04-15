@@ -1,0 +1,69 @@
+/* Container */
+div {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Form wrapper */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Labels */
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  /* Input fields */
+  input[type="text"],
+  select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  /* Radio buttons */
+  input[type="radio"] {
+    margin-right: 6px;
+  }
+  
+  /* Button styles */
+  button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  button[disabled] {
+    background-color: #a0a0a0;
+    cursor: not-allowed;
+  }
+  
+  button + button {
+    background-color: #dc3545;
+    margin-left: 10px;
+  }
+  
+  /* Error message */
+  .a1 {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  
+  /* Section spacing */
+  div > div {
+    margin-bottom: 10px;
+  }
+  

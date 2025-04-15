@@ -1,0 +1,110 @@
+<div>
+  <div style="width: 400px; padding: 20px">
+    <h1 style="padding-bottom: 10px">Employee form</h1>
+    <form [formGroup]="addempform">
+      <div><label>Name</label></div>
+      <div>
+        <input type="text" placeholder="Enter name" formControlName="name" />
+        <div
+          *ngIf="
+            addempform.get('name')?.touched && addempform.get('name')?.invalid
+          "
+          class="a1"
+        >
+          Name is required
+        </div>
+        <div *ngIf=" addempform.get('name')?.errors?.['minlength']" class="a1">
+          name should be > 5 charcter
+        </div>
+      </div>
+      <div><label>Address</label></div>
+      <div>
+        <input
+          type="text"
+          placeholder="Enter address"
+          formControlName="address"
+        />
+        <div
+          *ngIf="
+            addempform.get('address')?.touched &&
+            addempform.get('address')?.invalid
+          "
+          class="a1"
+        >
+          address is required and address should > 7 character
+        </div>
+      </div>
+      <div><label>PHONE Number</label></div>
+      <div>
+        <input
+          type="text"
+          placeholder="Enter Phone number"
+          formControlName="phoneno"
+        />
+        <div
+          *ngIf="
+            addempform.get('phoneno')?.touched &&
+            addempform.get('phoneno')?.invalid
+          "
+          class="a1"
+        >
+          address is required and address should > 7 character
+        </div>
+      </div>
+      <div>
+        <div>Gender</div>
+        <div>
+          <input type="radio" value="Male" formControlName="gender" />
+          <label>Male</label>
+        </div>
+        <div>
+          <input type="radio" value="female" formControlName="gender" />
+          <label>female</label>
+        </div>
+        <div>
+          <input type="radio" value="none" formControlName="gender" />
+          <label>None</label>
+        </div>
+      </div>
+
+      <div>
+        <label>Product</label>
+        <select formControlName="product">
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+          <option value="D">D</option>
+        </select>
+      </div>
+   <!-- @if(!(who==="client")){ -->
+    <div>
+      <label>Enter state here</label>
+      <select formControlName="state" (ngModelChange)="getcitiesfxn($event)">
+        <option *ngFor="let state of getstates" [value]="state.id">
+          {{ state.state }}
+        </option>
+      </select>
+    </div>
+     <div>
+  
+      <label>select city here</label>
+      <select formControlName="city">
+        <option *ngFor="let name of getcities" [value]="name.name">
+          {{ name.name }}
+        </option>
+      </select>
+    </div>
+     @if(!editdata){
+      <button (click)="addemp()" [disabled]="addempform.invalid">
+        add employee
+      </button>
+    
+     }
+     @else{
+      <button (click)="editclient()" [disabled]="addempform.invalid">edit emp</button>
+     }
+   
+      <button matbutton (click)="closeit()">cancel</button>
+    </form>
+  </div>
+</div>
